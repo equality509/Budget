@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="../public/normalize.css">
+<link rel="stylesheet" href="../public/skeleton.css">
+
+</head>
+<body>
+    <div class="container">
+        <h1>New Budget</h1>
+        <form action="/budget" method="POST">
+            date: <input type="text" name="date">
+            <br>
+            amount: <input type="text" name="amount">
+            <br>
+            name: <input type="text" name="name">
+            <br>
+            from: <input type="text" name="from">
+            <br>
+            tags: <input type="text" name="tags">
+            <br>
+            <input type="submit" value="create budget">
+        </form>
+    </div>
+</body>
+</html>
