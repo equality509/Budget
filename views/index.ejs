@@ -5,8 +5,8 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
-    <link rel="stylesheet" href="../public/normalize.css">
-<link rel="stylesheet" href="../public/skeleton.css">
+    <link rel="stylesheet" href="/normalize.css">
+<link rel="stylesheet" href="/skeleton.css">
 
 </head>
 
@@ -14,15 +14,25 @@
     
     <div class="container">
          <h1>Budgtr All</h1>
-    </div>
+    
     <a href="/budget/new"><button>Make New</button></a>
+
+    <h1>bankAccount
+        <% let bankAccount = function () { if (budget[i].amount < 0){ %>
+            <% document.getElementById('#col').style.color = 'red' ; %>
+            <%  }else if (budget[i].amount > 1000){ %>
+                <%  document.getElementById('#col').style.color = 'green' ; %>
+
+                <% }else(console.log('All Good'))} %>
+    </h1>
     <table>
         <% for(let i = 0; i < budget.length; i++) { %>
             <tr>
                 <td><%=budget[i].date %></td>
                 <td><a href="/budget/<%=i%>"><%=budget[i].name %></a></td>
                 <td><<%=budget[i].from %></td>
-                <td><%=budget[i].amount %></td>
+                <td id="col"><%=budget[i].amount %></td>
+                
                 <td><%=budget[i].tags %></td>
                 <!-- <form action="/fruits/<%= i %>?_method=DELETE" method="POST">
                     <input type="submit" value="Delete">
@@ -30,7 +40,7 @@
             </tr>
 
         <% } %>
-        </table></body>
+        </table></div></body>
 </html>
 
 

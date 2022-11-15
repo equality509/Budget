@@ -4,6 +4,8 @@ app.use("/static", express.static("public"));
 const Budget = require('./models/budget.js');
 var bodyParser = require('body-parser')
 app.use(bodyParser.urlencoded({ extended: false }))
+app.use(express.urlencoded({extended: true})) 
+app.use(express.static(__dirname + '/public'));
 
 
 // app.use("/budget", Budget)
